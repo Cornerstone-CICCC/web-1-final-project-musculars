@@ -1,3 +1,52 @@
-
+.makeup-and-hairstyle {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f6f4;
+}
+.makeup-and-hairstyle .makeup-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.makeup-and-hairstyle .makeup-main h2 {
+  font-size: 40px;
+  color: #725a58;
+  font-family: "Baskervville", serif;
+}
+.makeup-and-hairstyle .makeup-main span {
+  display: inline-block;
+  padding: 24px, 32px, 24px, 32px;
+  margin: 30px;
+  width: 200px;
+  height: 10px;
+  border-bottom: 0.8px solid #e3b6b1;
+}
+.makeup-and-hairstyle .makeup-main p {
+  font-weight: 300;
+}
+.makeup-and-hairstyle .makeup-main .makeup-button {
+  padding: 10px;
+  border: 1px solid #5e4a49;
+  background-color: transparent;
+  color: #5e4a49;
+  font-family: "Baskervville", serif;
+}
+.makeup-and-hairstyle .hairstyle-main {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.makeup-and-hairstyle .hairstyle-main .hairstyle-image {
+  margin-top: 30px;
+  width: 272px;
+  height: 351px;
+}
+.makeup-and-hairstyle .hairstyle-main .hairstyle-image image {
+  width: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */

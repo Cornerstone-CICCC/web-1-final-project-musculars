@@ -1,1 +1,60 @@
 @use "variable";
+
+.makeup-and-hairstyle {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: variable.$submain-bg-color;
+
+  .makeup-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: 40px;
+      color: variable.$main-text-color;
+      font-family: variable.$main-font;
+    }
+
+    span {
+      display: inline-block;
+      padding: 24px, 32px, 24px, 32px;
+      margin: 30px;
+      width: 200px;
+      height: 10px;
+      border-bottom: 0.8px solid variable.$main-button-color;
+    }
+
+    p {
+      font-weight: 300;
+    }
+
+    .makeup-button {
+      padding: 10px;
+      border: 1px solid variable.$linked-button-color;
+      background-color: transparent;
+      color: variable.$linked-button-color;
+      font-family: variable.$main-font;
+    }
+  }
+
+  .hairstyle-main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .hairstyle-image {
+      margin-top: 30px;
+      width: 272px;
+      height: 351px;
+
+      image {
+        width: 100%;
+      }
+    }
+  }
+}
