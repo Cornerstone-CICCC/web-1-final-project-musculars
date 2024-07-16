@@ -1,3 +1,5 @@
+@use "variable";
+
 body {
   margin: 0;
   padding: 0;
@@ -70,6 +72,51 @@ body {
   color: white;
   cursor: pointer;
   margin-top: 20px;
-  border: 1px solid #F8F6F4;
+  border: 1px solid white;
   background:none;
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img{
+  width: 300px;
+  height: auto;
+}
+
+.about-img img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.right-section button{
+  font-size: 18px;
+  padding: 10px 20px;
+  color:  variable.$color-brown;
+  cursor: pointer;
+  margin-top: 20px;
+  border: 1px solid variable.$color-brown;
+  background:none;
+}
+
+.about-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width:600px) {
+  .about-section{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about-buttons{
+    flex-direction: column-reverse;
+  }
 }
