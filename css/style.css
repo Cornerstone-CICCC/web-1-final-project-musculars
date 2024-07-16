@@ -11,7 +11,9 @@ body {
   background-color: #f8f6f4;
 }
 .makeup-and-hairstyle .makeup-main {
-  width: 300px;
+  max-width: 400px;
+  width: 100%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,9 +22,14 @@ body {
 .makeup-and-hairstyle .makeup-main h2 {
   letter-spacing: 10px;
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   color: #725a58;
   font-family: "Baskervville", serif;
+}
+@media (min-width: 991px) {
+  .makeup-and-hairstyle .makeup-main h2 {
+    font-size: 40px;
+  }
 }
 .makeup-and-hairstyle .makeup-main span {
   display: inline-block;
@@ -33,12 +40,12 @@ body {
 }
 .makeup-and-hairstyle .makeup-main p {
   text-align: center;
-  font-weight: 100;
-  font-size: 15px;
+  font-weight: 200;
+  font-size: 13px;
 }
 .makeup-and-hairstyle .makeup-main .makeup-button {
   padding: 10px 20px;
-  border: 1px solid #5e4a49;
+  border: 0.5px solid #5e4a49;
   background-color: transparent;
   color: #5e4a49;
   font-family: "Baskervville", serif;
