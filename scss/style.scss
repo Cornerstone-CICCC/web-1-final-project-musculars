@@ -161,3 +161,91 @@
     }
   }
 }
+
+.makeup-101-wrapper {
+  .makeup-101 {
+    width: 100%;
+    background-color: variable.$main-bg-color;
+    color: variable.$main-text-color;
+
+    h2 {
+      padding-top: 30px;
+      letter-spacing: 10px;
+      text-align: center;
+      font-size: 30px;
+      color: variable.$main-text-color;
+      font-family: variable.$main-font;
+
+      @media (min-width: 991px) {
+        font-size: 40px;
+      }
+    }
+
+    .makeup-description {
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .makeup-section {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+
+        h3 {
+          font-family: variable.$main-font;
+        }
+
+        p {
+          font-family: variable.$body-font;
+          color: black;
+          font-weight: 300;
+        }
+
+        .viewClass {
+          display: flex;
+          padding: 10px 20px;
+          border: none;
+          background-color: transparent;
+
+          p {
+            font-family: variable.$main-font;
+            color: variable.$linked-button-color;
+          }
+        }
+      }
+
+      .allClasses {
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        width: 90%;
+        border: 0.5px solid variable.$linked-button-color;
+        background-color: transparent;
+        color: variable.$linked-button-color;
+        font-family: variable.$main-font;
+      }
+    }
+
+    .instructor-image {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        transform: translate(10px, 10px);
+        width: 90%;
+        height: 90%;
+        border: 1px solid white;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
