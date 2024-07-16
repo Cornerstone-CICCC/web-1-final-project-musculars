@@ -11,15 +11,16 @@ body {
   background-color: #f8f6f4;
 }
 .makeup-and-hairstyle .makeup-main {
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .makeup-and-hairstyle .makeup-main h2 {
-  letter-spacing: 5px;
+  letter-spacing: 10px;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   color: #725a58;
   font-family: "Baskervville", serif;
 }
@@ -32,7 +33,8 @@ body {
 }
 .makeup-and-hairstyle .makeup-main p {
   text-align: center;
-  font-weight: 300;
+  font-weight: 100;
+  font-size: 15px;
 }
 .makeup-and-hairstyle .makeup-main .makeup-button {
   padding: 10px 20px;
@@ -41,33 +43,77 @@ body {
   color: #5e4a49;
   font-family: "Baskervville", serif;
 }
+.makeup-and-hairstyle .hairstyle-main {
+  margin-top: 20px;
+}
 .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap.wedding {
   order: 1;
 }
+@media (min-width: 991px) {
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap.wedding {
+    order: 2;
+  }
+}
 .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap.party {
   order: 2;
+}
+@media (min-width: 991px) {
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap.party {
+    order: 1;
+  }
 }
 .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap.photoshoot {
   order: 3;
 }
 .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image {
   margin-top: 30px;
-  width: 272px;
-  height: 351px;
+  flex: 0 0 200px;
+  position: relative;
+  z-index: 1;
 }
-.makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image img {
-  width: 100%;
-  height: 100%;
+@media (min-width: 991px) {
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image.main-photo-image {
+    flex: 0 0 250px;
+  }
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image.main-photo-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(15px, -15px);
+    border: 1px solid #e3b6b1;
+    z-index: -1;
+  }
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image.main-photo-image p {
+    transform: translate(-90%, -60%);
+    font-size: 45px;
+  }
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image.main-photo-image p::first-letter {
+    color: #b99692;
+  }
 }
-.makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap p {
+.makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image p {
   position: absolute;
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: transparent;
-  color: #f8f6f4;
-  font-size: 45px;
+  color: #fae9e7;
+  font-size: 35px;
   font-family: "Baskervville", serif;
+}
+@media (min-width: 991px) {
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image p {
+    transform: translate(-70%, -50%);
+  }
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image p::first-letter {
+    color: #b99692;
+  }
+}
+.makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

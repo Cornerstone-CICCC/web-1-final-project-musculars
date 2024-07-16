@@ -9,15 +9,16 @@
   background-color: variable.$submain-bg-color;
 
   .makeup-main {
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     h2 {
-      letter-spacing: 5px;
+      letter-spacing: 10px;
       text-align: center;
-      font-size: 40px;
+      font-size: 50px;
       color: variable.$main-text-color;
       font-family: variable.$main-font;
     }
@@ -32,7 +33,8 @@
 
     p {
       text-align: center;
-      font-weight: 300;
+      font-weight: 100;
+      font-size: 15px;
     }
 
     .makeup-button {
@@ -45,13 +47,20 @@
   }
 
   .hairstyle-main {
+    margin-top: 20px;
     .hairstyle-image-wrap {
       &.wedding {
         order: 1;
+        @media (min-width: 991px) {
+          order: 2;
+        }
       }
 
       &.party {
         order: 2;
+        @media (min-width: 991px) {
+          order: 1;
+        }
       }
 
       &.photoshoot {
@@ -60,24 +69,57 @@
 
       .hairstyle-image {
         margin-top: 30px;
-        flex: 0 0 250px;
+        flex: 0 0 200px;
         position: relative;
+        z-index: 1;
+
+        &.main-photo-image {
+          @media (min-width: 991px) {
+            flex: 0 0 250px;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              transform: translate(15px, -15px);
+              border: 1px solid variable.$main-button-color;
+              z-index: -1;
+            }
+
+            p {
+              transform: translate(-90%, -60%);
+              font-size: 45px;
+              &::first-letter {
+                color: #b99692;
+              }
+            }
+          }
+        }
+
+        p {
+          position: absolute;
+          top: 90%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: transparent;
+          color: variable.$main-bg-color;
+          font-size: 35px;
+          font-family: variable.$main-font;
+
+          @media (min-width: 991px) {
+            transform: translate(-70%, -50%);
+            &::first-letter {
+              color: #b99692;
+            }
+          }
+        }
 
         img {
           width: 100%;
-          height: 100%;
         }
-      }
-
-      p {
-        position: absolute;
-        top: 90%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: transparent;
-        color: variable.$submain-bg-color;
-        font-size: 45px;
-        font-family: variable.$main-font;
       }
     }
   }
