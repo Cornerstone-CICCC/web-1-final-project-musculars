@@ -15,6 +15,8 @@
     align-items: center;
 
     h2 {
+      letter-spacing: 5px;
+      text-align: center;
       font-size: 40px;
       color: variable.$main-text-color;
       font-family: variable.$main-font;
@@ -22,19 +24,19 @@
 
     span {
       display: inline-block;
-      padding: 24px, 32px, 24px, 32px;
-      margin: 30px;
+      margin-bottom: 20px;
       width: 200px;
       height: 10px;
       border-bottom: 0.8px solid variable.$main-button-color;
     }
 
     p {
+      text-align: center;
       font-weight: 300;
     }
 
     .makeup-button {
-      padding: 10px;
+      padding: 10px 20px;
       border: 1px solid variable.$linked-button-color;
       background-color: transparent;
       color: variable.$linked-button-color;
@@ -43,17 +45,39 @@
   }
 
   .hairstyle-main {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    .hairstyle-image-wrap {
+      &.wedding {
+        order: 1;
+      }
 
-    .hairstyle-image {
-      margin-top: 30px;
-      width: 272px;
-      height: 351px;
+      &.party {
+        order: 2;
+      }
 
-      image {
-        width: 100%;
+      &.photoshoot {
+        order: 3;
+      }
+
+      .hairstyle-image {
+        margin-top: 30px;
+        flex: 0 0 250px;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      p {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        color: variable.$submain-bg-color;
+        font-size: 45px;
+        font-family: variable.$main-font;
       }
     }
   }

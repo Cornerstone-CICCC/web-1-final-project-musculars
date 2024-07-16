@@ -1,3 +1,7 @@
+body {
+  box-sizing: border-box;
+}
+
 .makeup-and-hairstyle {
   padding: 30px;
   display: flex;
@@ -13,40 +17,57 @@
   align-items: center;
 }
 .makeup-and-hairstyle .makeup-main h2 {
+  letter-spacing: 5px;
+  text-align: center;
   font-size: 40px;
   color: #725a58;
   font-family: "Baskervville", serif;
 }
 .makeup-and-hairstyle .makeup-main span {
   display: inline-block;
-  padding: 24px, 32px, 24px, 32px;
-  margin: 30px;
+  margin-bottom: 20px;
   width: 200px;
   height: 10px;
   border-bottom: 0.8px solid #e3b6b1;
 }
 .makeup-and-hairstyle .makeup-main p {
+  text-align: center;
   font-weight: 300;
 }
 .makeup-and-hairstyle .makeup-main .makeup-button {
-  padding: 10px;
+  padding: 10px 20px;
   border: 1px solid #5e4a49;
   background-color: transparent;
   color: #5e4a49;
   font-family: "Baskervville", serif;
 }
-.makeup-and-hairstyle .hairstyle-main {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap.wedding {
+  order: 1;
 }
-.makeup-and-hairstyle .hairstyle-main .hairstyle-image {
+.makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap.party {
+  order: 2;
+}
+.makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap.photoshoot {
+  order: 3;
+}
+.makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image {
   margin-top: 30px;
   width: 272px;
   height: 351px;
 }
-.makeup-and-hairstyle .hairstyle-main .hairstyle-image image {
+.makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image img {
   width: 100%;
+  height: 100%;
+}
+.makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap p {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: #f8f6f4;
+  font-size: 45px;
+  font-family: "Baskervville", serif;
 }
 
 /*# sourceMappingURL=style.css.map */
