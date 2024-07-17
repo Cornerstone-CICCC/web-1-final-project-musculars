@@ -192,7 +192,7 @@
     .makeup-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 80px;
+      gap: 40px;
       padding-bottom: 20px;
 
       @media (min-width: 991px) {
@@ -242,6 +242,7 @@
             h3 {
               font-family: variable.$main-font;
               color: variable.$main-text-color;
+              font-size: 25px;
             }
 
             p {
