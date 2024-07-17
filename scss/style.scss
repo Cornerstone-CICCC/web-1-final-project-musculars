@@ -337,3 +337,78 @@
     }
   }
 }
+
+.diy-wrapper {
+  background-color: variable.$submain-bg-color;
+
+  .diy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+
+    h2 {
+      letter-spacing: 10px;
+      text-align: center;
+      font-size: 30px;
+      color: variable.$main-text-color;
+      font-family: variable.$main-font;
+    }
+
+    .videos {
+      display: flex;
+      gap: 10px;
+    }
+
+    .beauty-tips {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      padding: 0 20px;
+
+      @media (min-width: 991px) {
+        padding: 20px 0px;
+        height: 100px;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        border: 0.5px solid variable.$linked-button-color;
+        background-color: transparent;
+        color: variable.$linked-button-color;
+        font-family: variable.$main-font;
+
+        @media (min-width: 991px) {
+          width: 40%;
+          height: 60px;
+        }
+
+        &:hover {
+          background-color: #b99692;
+          border: 0.5px solid #b99692;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.scroll_list {
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  @media (min-width: 991px) {
+    justify-content: center;
+  }
+}
+
+.scroll_list li {
+  list-style: none;
+}
