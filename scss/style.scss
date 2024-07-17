@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: variable.$submain-bg-color;
+  background-color: variable.$color-paleWhite;
 
   .makeup-main {
     max-width: 400px;
@@ -21,8 +21,8 @@
       letter-spacing: 10px;
       text-align: center;
       font-size: 30px;
-      color: variable.$main-text-color;
-      font-family: variable.$main-font;
+      color: variable.$color-russett;
+      font-family: variable.$font-title;
 
       @media (min-width: 991px) {
         font-size: 40px;
@@ -34,7 +34,7 @@
       margin-bottom: 20px;
       width: 200px;
       height: 10px;
-      border-bottom: 0.8px solid variable.$main-button-color;
+      border-bottom: 0.8px solid variable.$color-roseFog;
     }
 
     p {
@@ -45,15 +45,15 @@
 
     .makeup-button {
       padding: 10px 20px;
-      border: 0.5px solid variable.$linked-button-color;
+      border: 0.5px solid variable.$color-donJuan;
       background-color: transparent;
-      color: variable.$linked-button-color;
-      font-family: variable.$main-font;
+      color: variable.$color-donJuan;
+      font-family: variable.$font-title;
 
       &:hover {
-        background-color: #b99692;
-        border: 0.5px solid #b99692;
-        color: white;
+        background-color: variable.$color-darkPink;
+        border: 0.5px solid variable.$color-darkPink;
+        color: variable.$color-paleWhite;
       }
     }
   }
@@ -97,7 +97,7 @@
               width: 100%;
               height: 100%;
               transform: translate(15px, -15px);
-              border: 1px solid variable.$main-button-color;
+              border: 1px solid variable.$color-roseFog;
               z-index: -1;
             }
 
@@ -105,7 +105,7 @@
               transform: translate(-65%, -60%);
               font-size: 45px;
               &::first-letter {
-                color: #b99692;
+                color: variable.$color-darkPink;
               }
             }
           }
@@ -123,7 +123,7 @@
               width: 100%;
               height: 100%;
               transform: translate(15px, -15px);
-              border: 1px solid variable.$main-button-color;
+              border: 1px solid variable.$color-roseFog;
               z-index: -1;
             }
 
@@ -131,7 +131,7 @@
               transform: translate(-90%, -60%);
               font-size: 45px;
               &::first-letter {
-                color: #b99692;
+                color: variable.$color-darkPink;
               }
             }
           }
@@ -143,14 +143,14 @@
           left: 50%;
           transform: translate(-50%, -50%);
           background-color: transparent;
-          color: variable.$main-bg-color;
+          color: variable.$color-linen;
           font-size: 35px;
-          font-family: variable.$main-font;
+          font-family: variable.$font-title;
 
           @media (min-width: 991px) {
             transform: translate(-70%, -50%);
             &::first-letter {
-              color: #b99692;
+              color: variable.$color-darkPink;
             }
           }
         }
@@ -164,12 +164,11 @@
 }
 
 .makeup-101-wrapper {
-  background-color: #f8f6f4;
+  background-color: variable.$color-paleWhite;
 
   .makeup-101 {
-    width: 100%;
-    background-color: variable.$main-bg-color;
-    color: variable.$main-text-color;
+    background-color: variable.$color-linen;
+    color: variable.$color-russett;
 
     @media (min-width: 991px) {
       padding: 0 100px;
@@ -181,8 +180,8 @@
       letter-spacing: 10px;
       text-align: center;
       font-size: 30px;
-      color: variable.$main-text-color;
-      font-family: variable.$main-font;
+      color: variable.$color-russett;
+      font-family: variable.$font-title;
 
       @media (min-width: 991px) {
         font-size: 40px;
@@ -215,7 +214,7 @@
           text-decoration: none;
 
           &:hover {
-            background-color: #e3b6b1; // 修正必要
+            background-color: variable.$color-roseFog; // need modification
           }
 
           @media (min-width: 991px) {
@@ -244,15 +243,15 @@
             }
 
             h3 {
-              font-family: variable.$main-font;
-              color: variable.$main-text-color;
+              font-family: variable.$font-title;
+              color: variable.$color-russett;
               font-size: 25px;
               margin: 0;
             }
 
             p {
-              font-family: variable.$body-font;
-              color: black;
+              font-family: variable.$font-body;
+              color: variable.$color-black;
               font-weight: 200;
               font-size: 14px;
             }
@@ -266,8 +265,8 @@
             gap: 10px;
 
             p {
-              font-family: variable.$main-font;
-              color: variable.$linked-button-color;
+              font-family: variable.$font-title;
+              color: variable.$color-donJuan;
 
               @media (min-width: 991px) {
                 display: none;
@@ -290,10 +289,10 @@
             padding: 10px 20px;
             margin-bottom: 10px;
             width: 100%;
-            border: 0.5px solid variable.$linked-button-color;
+            border: 0.5px solid variable.$color-donJuan;
             background-color: transparent;
-            color: variable.$linked-button-color;
-            font-family: variable.$main-font;
+            color: variable.$color-donJuan;
+            font-family: variable.$font-title;
 
             @media (min-width: 991px) {
               width: 40%;
@@ -301,9 +300,9 @@
             }
 
             &:hover {
-              background-color: #b99692;
-              border: 0.5px solid #b99692;
-              color: white;
+              background-color: variable.$color-darkPink;
+              border: 0.5px solid variable.$color-darkPink;
+              color: variable.$color-paleWhite;
             }
           }
         }
@@ -338,7 +337,7 @@
 }
 
 .diy-wrapper {
-  background-color: variable.$submain-bg-color;
+  background-color: variable.$color-paleWhite;
 
   .diy-content {
     display: flex;
@@ -351,7 +350,7 @@
       margin-bottom: 20px;
       width: 200px;
       height: 10px;
-      border-bottom: 0.8px solid variable.$main-button-color;
+      border-bottom: 0.8px solid variable.$color-roseFog;
     }
 
     @media (min-width: 991px) {
@@ -364,8 +363,8 @@
       padding: 20px;
       text-align: center;
       font-size: 30px;
-      color: variable.$main-text-color;
-      font-family: variable.$main-font;
+      color: variable.$color-russett;
+      font-family: variable.$font-title;
       @media (min-width: 991px) {
         font-size: 40px;
       }
@@ -388,10 +387,10 @@
         padding: 10px 20px;
         margin-bottom: 10px;
         width: 100%;
-        border: 0.5px solid variable.$linked-button-color;
+        border: 0.5px solid variable.$color-donJuan;
         background-color: transparent;
-        color: variable.$linked-button-color;
-        font-family: variable.$main-font;
+        color: variable.$color-donJuan;
+        font-family: variable.$font-title;
 
         @media (min-width: 991px) {
           width: 40%;
@@ -399,9 +398,9 @@
         }
 
         &:hover {
-          background-color: #b99692;
-          border: 0.5px solid #b99692;
-          color: white;
+          background-color: variable.$color-darkPink;
+          border: 0.5px solid variable.$color-darkPink;
+          color: variable.$color-paleWhite;
         }
       }
     }
@@ -437,7 +436,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
+  background-color: variable.$color-black;
 
   .modal-content {
     position: relative;
@@ -452,11 +451,11 @@
     z-index: 999;
     font-size: 2rem;
     font-weight: normal;
-    color: #fff;
+    color: variable.$color-paleWhite;
 
     &:hover,
     :focus {
-      color: #bbb;
+      color: variable.$color-paleWhite;
       text-decoration: none;
       cursor: pointer;
     }
