@@ -1,7 +1,7 @@
 @use "variable";
 
 .makeup-and-hairstyle {
-  padding: 30px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -263,8 +263,7 @@
             padding: 10px 20px;
             border: none;
             background-color: transparent;
-            justify-content: center;
-            align-items: center;
+            gap: 10px;
 
             p {
               font-family: variable.$main-font;
@@ -347,12 +346,29 @@
     align-items: center;
     padding: 30px;
 
+    span {
+      display: inline-block;
+      margin-bottom: 20px;
+      width: 200px;
+      height: 10px;
+      border-bottom: 0.8px solid variable.$main-button-color;
+    }
+
+    @media (min-width: 991px) {
+      span {
+        display: none;
+      }
+    }
+
     h2 {
-      letter-spacing: 10px;
+      padding: 20px;
       text-align: center;
       font-size: 30px;
       color: variable.$main-text-color;
       font-family: variable.$main-font;
+      @media (min-width: 991px) {
+        font-size: 40px;
+      }
     }
 
     .videos {
@@ -365,11 +381,8 @@
       display: flex;
       justify-content: center;
       padding: 0 20px;
-
-      @media (min-width: 991px) {
-        padding: 20px 0px;
-        height: 100px;
-      }
+      margin-top: 40px;
+      height: 70px;
 
       button {
         padding: 10px 20px;
@@ -397,8 +410,7 @@
 
 .scroll_list {
   display: flex;
-  gap: 10px;
-  margin: 0 auto;
+  gap: 5px;
   padding: 0;
   width: 90%;
   overflow-x: auto;
@@ -408,6 +420,7 @@
 
   @media (min-width: 991px) {
     justify-content: center;
+    overflow-x: unset;
   }
 
   .thumbnail {
