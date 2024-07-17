@@ -88,6 +88,7 @@
         &:hover {
           @media (min-width: 991px) {
             flex: 0 0 250px;
+
             &::before {
               content: "";
               position: absolute;
@@ -163,10 +164,17 @@
 }
 
 .makeup-101-wrapper {
+  background-color: #f8f6f4;
+
   .makeup-101 {
     width: 100%;
     background-color: variable.$main-bg-color;
     color: variable.$main-text-color;
+
+    @media (min-width: 991px) {
+      padding: 0 100px;
+      margin: 0 60px;
+    }
 
     h2 {
       padding-top: 30px;
@@ -181,70 +189,144 @@
       }
     }
 
-    .makeup-description {
-      padding: 20px 0;
+    .makeup-wrapper {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      gap: 80px;
+      padding-bottom: 20px;
 
-      .makeup-section {
-        padding: 0 20px;
+      @media (min-width: 991px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .makeup-description {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-top: 30px;
 
-        h3 {
-          font-family: variable.$main-font;
-        }
-
-        p {
-          font-family: variable.$body-font;
-          color: black;
-          font-weight: 300;
-        }
-
-        .viewClass {
+        .makeup-section {
+          padding: 20px 10px;
           display: flex;
-          padding: 10px 20px;
-          border: none;
-          background-color: transparent;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
 
-          p {
-            font-family: variable.$main-font;
+          text-align: center;
+          text-decoration: none;
+
+          &:hover {
+            background-color: #e3b6b1; // 修正必要
+          }
+
+          @media (min-width: 991px) {
+            padding: 0;
+            margin-top: 30px;
+            flex-direction: row;
+            text-align: start;
+          }
+
+          .makeup-content {
+            width: 100%;
+            height: 100%;
+
+            .lesson-name {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              @media (min-width: 991px) {
+                flex-direction: row;
+              }
+            }
+
+            h3 {
+              font-family: variable.$main-font;
+              color: variable.$main-text-color;
+            }
+
+            p {
+              font-family: variable.$body-font;
+              color: black;
+              font-weight: 200;
+              font-size: 14px;
+            }
+          }
+
+          .viewClass {
+            display: flex;
+            padding: 10px 20px;
+            border: none;
+            background-color: transparent;
+            justify-content: center;
+            justify-content: center;
+
+            p {
+              font-family: variable.$main-font;
+              color: variable.$linked-button-color;
+
+              @media (min-width: 991px) {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .allClasses {
+          width: 100%;
+          display: flex;
+          justify-content: start;
+          padding: 0 20px;
+
+          @media (min-width: 991px) {
+            padding: 20px 0px;
+            height: 100px;
+          }
+
+          button {
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            width: 100%;
+            border: 0.5px solid variable.$linked-button-color;
+            background-color: transparent;
             color: variable.$linked-button-color;
+            font-family: variable.$main-font;
+
+            @media (min-width: 991px) {
+              width: 40%;
+              height: 60px;
+            }
+
+            &:hover {
+              background-color: #b99692;
+              border: 0.5px solid #b99692;
+              color: white;
+            }
           }
         }
       }
 
-      .allClasses {
-        padding: 10px 20px;
-        margin-bottom: 10px;
-        width: 90%;
-        border: 0.5px solid variable.$linked-button-color;
-        background-color: transparent;
-        color: variable.$linked-button-color;
-        font-family: variable.$main-font;
-      }
-    }
+      .instructor-image {
+        position: relative;
+        padding-top: 20px;
 
-    .instructor-image {
-      position: relative;
+        img {
+          width: 100%;
+        }
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        transform: translate(10px, 10px);
-        width: 90%;
-        height: 90%;
-        border: 1px solid white;
-      }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 25px;
+          left: 10px;
+          transform: translate(10px, 10px);
+          width: 90%;
+          height: 90%;
+          border: 1px solid white;
 
-      img {
-        width: 100%;
+          @media (min-width: 991px) {
+            transform: translate(10px, 10px);
+          }
+        }
       }
     }
   }
