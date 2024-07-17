@@ -1,9 +1,12 @@
-body {
-  box-sizing: border-box;
+.section-title, .diy-wrapper .diy-content h2, .makeup-101-wrapper .makeup-101 h2, .makeup-and-hairstyle .makeup-main h2 {
+  font-size: 30px;
+  text-align: center;
+  color: #725a58;
+  font-family: "Baskervville", serif;
 }
 
 .makeup-and-hairstyle {
-  padding: 30px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,10 +24,6 @@ body {
 }
 .makeup-and-hairstyle .makeup-main h2 {
   letter-spacing: 10px;
-  text-align: center;
-  font-size: 30px;
-  color: #725a58;
-  font-family: "Baskervville", serif;
 }
 @media (min-width: 991px) {
   .makeup-and-hairstyle .makeup-main h2 {
@@ -50,6 +49,11 @@ body {
   color: #5e4a49;
   font-family: "Baskervville", serif;
 }
+.makeup-and-hairstyle .makeup-main .makeup-button:hover {
+  background-color: #b99692;
+  border: 0.5px solid #b99692;
+  color: #f8f6f4;
+}
 .makeup-and-hairstyle .hairstyle-main {
   margin-top: 20px;
 }
@@ -74,9 +78,36 @@ body {
 }
 .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image {
   margin-top: 30px;
-  flex: 0 0 200px;
   position: relative;
   z-index: 1;
+}
+@media (min-width: 991px) {
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image.sub-photo-image {
+    flex: 0 0 200px;
+  }
+}
+@media (min-width: 991px) and (min-width: 991px) {
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image.sub-photo-image:hover {
+    flex: 0 0 250px;
+  }
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image.sub-photo-image:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(15px, -15px);
+    border: 1px solid #e3b6b1;
+    z-index: -1;
+  }
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image.sub-photo-image:hover p {
+    transform: translate(-65%, -60%);
+    font-size: 45px;
+  }
+  .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image.sub-photo-image:hover p::first-letter {
+    color: #b99692;
+  }
 }
 @media (min-width: 991px) {
   .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image.main-photo-image {
@@ -121,6 +152,284 @@ body {
 }
 .makeup-and-hairstyle .hairstyle-main .hairstyle-image-wrap .hairstyle-image img {
   width: 100%;
+}
+
+.makeup-101-wrapper {
+  background-color: #f8f6f4;
+}
+.makeup-101-wrapper .makeup-101 {
+  background-color: #fae9e7;
+  color: #725a58;
+}
+@media (min-width: 991px) {
+  .makeup-101-wrapper .makeup-101 {
+    padding: 0 50px;
+    margin: 0 60px;
+  }
+}
+.makeup-101-wrapper .makeup-101 h2 {
+  padding-top: 30px;
+  letter-spacing: 10px;
+}
+@media (min-width: 991px) {
+  .makeup-101-wrapper .makeup-101 h2 {
+    font-size: 40px;
+  }
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 20px;
+}
+@media (min-width: 991px) {
+  .makeup-101-wrapper .makeup-101 .makeup-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description {
+  display: flex;
+  flex-direction: column;
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .makeup-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .makeup-section:hover {
+  background-color: #e3b6b1;
+}
+@media (min-width: 991px) {
+  .makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .makeup-section {
+    padding: 0;
+    margin-top: 30px;
+    height: 100px;
+    flex-direction: row;
+    text-align: start;
+    justify-content: start;
+  }
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .makeup-section .makeup-content {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .makeup-section .makeup-content .lesson-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .makeup-section .makeup-content .lesson-name figure {
+  margin: 0;
+}
+@media (min-width: 991px) {
+  .makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .makeup-section .makeup-content .lesson-name {
+    flex-direction: row;
+  }
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .makeup-section .makeup-content h3 {
+  font-family: "Baskervville", serif;
+  color: #725a58;
+  font-size: 25px;
+  margin: 0;
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .makeup-section .makeup-content p {
+  font-family: "Poppins", sans-serif;
+  color: #191919;
+  font-weight: 200;
+  font-size: 14px;
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .makeup-section .viewClass {
+  display: flex;
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  gap: 10px;
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .makeup-section .viewClass p {
+  font-family: "Baskervville", serif;
+  color: #5e4a49;
+}
+@media (min-width: 991px) {
+  .makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .makeup-section .viewClass p {
+    display: none;
+  }
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .all-classes {
+  display: flex;
+  justify-content: start;
+  padding: 0 20px;
+  margin: 20px;
+}
+@media (min-width: 991px) {
+  .makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .all-classes {
+    padding: 20px 0px;
+    height: 100px;
+  }
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .all-classes button {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 0.5px solid #5e4a49;
+  background-color: transparent;
+  color: #5e4a49;
+  font-family: "Baskervville", serif;
+}
+@media (min-width: 991px) {
+  .makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .all-classes button {
+    width: 40%;
+    height: 60px;
+  }
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .makeup-description .all-classes button:hover {
+  background-color: #b99692;
+  border: 0.5px solid #b99692;
+  color: #f8f6f4;
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .instructor-image {
+  position: relative;
+  padding-top: 20px;
+  margin: 0;
+  flex: 0 0 350px;
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .instructor-image img {
+  width: 100%;
+}
+.makeup-101-wrapper .makeup-101 .makeup-wrapper .instructor-image::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  transform: translate(10px, 10px);
+  width: 90%;
+  height: 90%;
+  border: 1px solid #fbfafa;
+}
+@media (min-width: 991px) {
+  .makeup-101-wrapper .makeup-101 .makeup-wrapper .instructor-image::after {
+    transform: translate(10px, 10px);
+    width: 90%;
+    height: 80%;
+  }
+}
+
+.diy-wrapper {
+  background-color: #f8f6f4;
+}
+.diy-wrapper .diy-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+.diy-wrapper .diy-content span {
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 10px;
+  border-bottom: 0.8px solid #e3b6b1;
+}
+@media (min-width: 991px) {
+  .diy-wrapper .diy-content span {
+    display: none;
+  }
+}
+.diy-wrapper .diy-content h2 {
+  padding: 20px;
+}
+@media (min-width: 991px) {
+  .diy-wrapper .diy-content h2 {
+    font-size: 40px;
+  }
+}
+.diy-wrapper .diy-content .videos {
+  display: flex;
+  gap: 10px;
+}
+.diy-wrapper .diy-content .beauty-tips {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  margin-top: 40px;
+  height: 70px;
+}
+.diy-wrapper .diy-content .beauty-tips button {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 0.5px solid #5e4a49;
+  background-color: transparent;
+  color: #5e4a49;
+  font-family: "Baskervville", serif;
+}
+@media (min-width: 991px) {
+  .diy-wrapper .diy-content .beauty-tips button {
+    width: 40%;
+    height: 60px;
+  }
+}
+.diy-wrapper .diy-content .beauty-tips button:hover {
+  background-color: #b99692;
+  border: 0.5px solid #b99692;
+  color: #f8f6f4;
+}
+
+.scroll_list {
+  display: flex;
+  gap: 5px;
+  padding: 0;
+  width: 90%;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  list-style: none;
+}
+@media (min-width: 991px) {
+  .scroll_list {
+    justify-content: center;
+    overflow-x: unset;
+  }
+}
+.scroll_list .thumbnail {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #191919;
+}
+.modal .modal-content {
+  position: relative;
+  margin: 15% auto;
+  width: 80%;
+}
+.modal .close {
+  position: absolute;
+  right: -25px;
+  top: -10px;
+  z-index: 999;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #f8f6f4;
+}
+.modal .close:hover,
+.modal .close :focus {
+  color: #f8f6f4;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
