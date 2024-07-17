@@ -1,5 +1,12 @@
 @use "variable";
 
+.section-title {
+  font-size: 30px;
+  text-align: center;
+  color: variable.$color-russett;
+  font-family: variable.$font-title;
+}
+
 .makeup-and-hairstyle {
   padding: 40px;
   display: flex;
@@ -18,6 +25,7 @@
     align-items: center;
 
     h2 {
+      @extend .section-title;
       letter-spacing: 10px;
       text-align: center;
       font-size: 30px;
@@ -182,6 +190,7 @@
     }
 
     h2 {
+      @extend .section-title;
       padding-top: 30px;
       letter-spacing: 10px;
       text-align: center;
@@ -371,6 +380,7 @@
     }
 
     h2 {
+      @extend .section-title;
       padding: 20px;
       text-align: center;
       font-size: 30px;
