@@ -28,7 +28,7 @@
       @extend .section-title;
       letter-spacing: 10px;
 
-      @media (min-width: 991px) {
+      @media (min-width: variable.$responsive-min-width) {
         font-size: 40px;
       }
     }
@@ -67,14 +67,14 @@
     .hairstyle-image-wrap {
       &.wedding {
         order: 1;
-        @media (min-width: 991px) {
+        @media (min-width: variable.$responsive-min-width) {
           order: 2;
         }
       }
 
       &.party {
         order: 2;
-        @media (min-width: 991px) {
+        @media (min-width: variable.$responsive-min-width) {
           order: 1;
         }
       }
@@ -89,11 +89,11 @@
         z-index: 1;
 
         &.sub-photo-image {
-          @media (min-width: 991px) {
+          @media (min-width: variable.$responsive-min-width) {
             flex: 0 0 200px;
 
             &:hover {
-              @media (min-width: 991px) {
+              @media (min-width: variable.$responsive-min-width) {
                 flex: 0 0 250px;
 
                 &::before {
@@ -121,7 +121,7 @@
         }
 
         &.main-photo-image {
-          @media (min-width: 991px) {
+          @media (min-width: variable.$responsive-min-width) {
             flex: 0 0 250px;
 
             &::before {
@@ -156,7 +156,7 @@
           font-size: 35px;
           font-family: variable.$font-title;
 
-          @media (min-width: 991px) {
+          @media (min-width: variable.$responsive-min-width) {
             transform: translate(-70%, -50%);
             &::first-letter {
               color: variable.$color-darkPink;
@@ -179,7 +179,7 @@
     background-color: variable.$color-linen;
     color: variable.$color-russett;
 
-    @media (min-width: 991px) {
+    @media (min-width: variable.$responsive-min-width) {
       padding: 0 50px;
       margin: 0 60px;
     }
@@ -189,7 +189,7 @@
       padding-top: 30px;
       letter-spacing: 10px;
 
-      @media (min-width: 991px) {
+      @media (min-width: variable.$responsive-min-width) {
         font-size: 40px;
       }
     }
@@ -200,7 +200,7 @@
       gap: 40px;
       padding-bottom: 20px;
 
-      @media (min-width: 991px) {
+      @media (min-width: variable.$responsive-min-width) {
         flex-direction: row;
         justify-content: space-between;
       }
@@ -221,7 +221,7 @@
             background-color: variable.$color-roseFog; // need modification
           }
 
-          @media (min-width: 991px) {
+          @media (min-width: variable.$responsive-min-width) {
             padding: 0;
             margin-top: 30px;
             height: 100px;
@@ -243,7 +243,7 @@
                 margin: 0;
               }
 
-              @media (min-width: 991px) {
+              @media (min-width: variable.$responsive-min-width) {
                 flex-direction: row;
               }
             }
@@ -274,7 +274,7 @@
               font-family: variable.$font-title;
               color: variable.$color-donJuan;
 
-              @media (min-width: 991px) {
+              @media (min-width: variable.$responsive-min-width) {
                 display: none;
               }
             }
@@ -286,7 +286,7 @@
           justify-content: start;
           padding: 0 20px;
           margin: 20px;
-          @media (min-width: 991px) {
+          @media (min-width: variable.$responsive-min-width) {
             padding: 20px 0px;
             height: 100px;
           }
@@ -300,7 +300,7 @@
             color: variable.$color-donJuan;
             font-family: variable.$font-title;
 
-            @media (min-width: 991px) {
+            @media (min-width: variable.$responsive-min-width) {
               width: 40%;
               height: 60px;
             }
@@ -334,7 +334,7 @@
           height: 90%;
           border: 1px solid variable.$color-paperWhite;
 
-          @media (min-width: 991px) {
+          @media (min-width: variable.$responsive-min-width) {
             transform: translate(0.2rem, 0.3rem);
             width: 90%;
             height: 80%;
@@ -362,7 +362,7 @@
       border-bottom: 0.8px solid variable.$color-roseFog;
     }
 
-    @media (min-width: 991px) {
+    @media (min-width: variable.$responsive-min-width) {
       span {
         display: none;
       }
@@ -371,7 +371,7 @@
     h2 {
       @extend .section-title;
       padding: 20px;
-      @media (min-width: 991px) {
+      @media (min-width: variable.$responsive-min-width) {
         font-size: 40px;
       }
     }
@@ -398,7 +398,7 @@
         color: variable.$color-donJuan;
         font-family: variable.$font-title;
 
-        @media (min-width: 991px) {
+        @media (min-width: variable.$responsive-min-width) {
           width: 40%;
           height: 60px;
         }
@@ -423,7 +423,7 @@
   -webkit-overflow-scrolling: touch;
   list-style: none;
 
-  @media (min-width: 991px) {
+  @media (min-width: variable.$responsive-min-width) {
     justify-content: center;
     overflow-x: unset;
   }
