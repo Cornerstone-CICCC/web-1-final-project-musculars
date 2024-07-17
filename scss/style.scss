@@ -85,27 +85,33 @@
         position: relative;
         z-index: 1;
 
-        &:hover {
+        &.sub-photo-image {
           @media (min-width: 991px) {
-            flex: 0 0 250px;
+            flex: 0 0 200px;
 
-            &::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              transform: translate(15px, -15px);
-              border: 1px solid variable.$color-roseFog;
-              z-index: -1;
-            }
+            &:hover {
+              @media (min-width: 991px) {
+                flex: 0 0 250px;
 
-            p {
-              transform: translate(-65%, -60%);
-              font-size: 45px;
-              &::first-letter {
-                color: variable.$color-darkPink;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  transform: translate(15px, -15px);
+                  border: 1px solid variable.$color-roseFog;
+                  z-index: -1;
+                }
+
+                p {
+                  transform: translate(-65%, -60%);
+                  font-size: 45px;
+                  &::first-letter {
+                    color: variable.$color-darkPink;
+                  }
+                }
               }
             }
           }
