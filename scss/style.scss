@@ -177,7 +177,7 @@
     color: variable.$color-russett;
 
     @media (min-width: 991px) {
-      padding: 0 100px;
+      padding: 0 50px;
       margin: 0 60px;
     }
 
@@ -287,7 +287,7 @@
           display: flex;
           justify-content: start;
           padding: 0 20px;
-
+          margin: 20px;
           @media (min-width: 991px) {
             padding: 20px 0px;
             height: 100px;
@@ -320,6 +320,7 @@
         position: relative;
         padding-top: 20px;
         margin: 0;
+        flex: 0 0 350px;
 
         img {
           width: 100%;
@@ -328,15 +329,17 @@
         &::after {
           content: "";
           position: absolute;
-          top: 25px;
-          left: 10px;
+          top: 30px;
+          left: 15px;
           transform: translate(10px, 10px);
           width: 90%;
           height: 90%;
-          border: 1px solid white;
+          border: 1px solid variable.$color-paperWhite;
 
           @media (min-width: 991px) {
             transform: translate(10px, 10px);
+            width: 90%;
+            height: 80%;
           }
         }
       }
