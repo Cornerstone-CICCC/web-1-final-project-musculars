@@ -21,9 +21,13 @@ footer {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      border-bottom: solid 1px variable.$color-black;
+      border-bottom: solid 0.5px variable.$color-black;
       width: 100%;
       padding: 20px;
+
+      @media (min-width: 800px) {
+        padding-bottom: 30px;
+      }
 
       .company-catchphrase {
         margin-top: 15px;
@@ -45,14 +49,23 @@ footer {
         }
       }
     }
+
     .menu-wrapper {
       .menu {
         display: flex;
         justify-content: space-between;
         margin: 10px 0;
 
+        @media (min-width: 800px) {
+          margin: 17px 0;
+        }
+
         ul {
           flex: 1;
+
+          @media (min-width: 800px) {
+            display: flex;
+          }
 
           li {
             list-style: none;
@@ -81,7 +94,7 @@ footer {
     .copylight {
       display: flex;
       justify-content: center;
-      border-top: solid 1px variable.$color-black;
+      border-top: solid 0.5px variable.$color-black;
       width: 100%;
 
       P {
