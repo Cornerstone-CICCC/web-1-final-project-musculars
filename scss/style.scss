@@ -1,21 +1,21 @@
 @use "variable";
 
 .makeup-and-hairstyle {
-  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 40px;
   background-color: variable.$color-paleWhite;
 
   .makeup-main {
-    max-width: 400px;
-    width: 100%;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 10px;
 
     h2 {
       @extend .section-title;
@@ -41,12 +41,12 @@
     .makeup-button {
       @extend .button-style;
       padding: 10px 20px;
-      height: 60px;
       width: 180px;
+      height: 60px;
 
       &:hover {
-        background-color: variable.$color-darkPink;
         border: 0.5px solid variable.$color-darkPink;
+        background-color: variable.$color-darkPink;
         color: variable.$color-paleWhite;
       }
     }
@@ -54,6 +54,11 @@
 
   .hairstyle-main {
     margin-top: 20px;
+
+    p {
+      font-size: 50px;
+    }
+
     .hairstyle-image-wrap {
       &.wedding {
         order: 1;
@@ -79,8 +84,24 @@
         z-index: 1;
 
         &.sub-photo-image {
+          p {
+            font-size: 50px;
+          }
+
           @media (min-width: variable.$responsive-min-width) {
             flex: 0 0 200px;
+
+            p {
+              &.party {
+                transform: translate(-130%, -60%);
+                font-size: 40px;
+              }
+
+              &.photoshoot {
+                transform: translate(-60%, -60%);
+                font-size: 40px;
+              }
+            }
 
             &:hover {
               @media (min-width: variable.$responsive-min-width) {
@@ -101,10 +122,10 @@
                 p {
                   transform: translate(-65%, -60%);
                   font-size: 45px;
-                }
 
-                .party {
-                  transform: translate(-140%, -60%);
+                  &.party {
+                    transform: translate(-140%, -60%);
+                  }
                 }
               }
             }
@@ -112,6 +133,10 @@
         }
 
         &.main-photo-image {
+          p {
+            font-size: 50px;
+          }
+
           @media (min-width: variable.$responsive-min-width) {
             flex: 0 0 250px;
 
@@ -178,8 +203,8 @@
     color: variable.$color-russett;
 
     @media (min-width: variable.$responsive-min-width) {
-      padding: 20px 50px;
       margin: 0 60px;
+      padding: 20px 50px;
     }
 
     @media (min-width: 1024px) {
@@ -188,7 +213,7 @@
 
     h2 {
       @extend .section-title;
-      padding-top: 30px;
+      padding: 30px 20px 0;
       letter-spacing: 10px;
       font-size: 40px;
 
@@ -200,24 +225,25 @@
     .makeup-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 40px;
       padding-bottom: 20px;
 
       @media (min-width: variable.$responsive-min-width) {
         flex-direction: row;
         justify-content: space-between;
+        gap: 40px;
       }
 
       .makeup-description {
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        padding: 0 20px;
 
         .makeup-section {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          margin-top: 40px;
           text-align: center;
           text-decoration: none;
 
@@ -226,18 +252,18 @@
           }
 
           @media (min-width: variable.$responsive-min-width) {
-            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            padding: 10px;
             margin-top: 30px;
             height: 100px;
-            flex-direction: row;
             text-align: start;
-            justify-content: start;
           }
 
           .makeup-content {
             width: 100%;
             height: 100%;
-            padding: 10px;
 
             .lesson-name {
               display: flex;
@@ -254,10 +280,11 @@
             }
 
             h3 {
+              margin: 0;
               font-family: variable.$font-title;
               color: variable.$color-russett;
               font-size: 30px;
-              margin: 0;
+
               @media (min-width: variable.$responsive-min-width) {
                 font-size: 20px;
               }
@@ -345,7 +372,7 @@
           position: absolute;
           top: 25px;
           left: 15px;
-          transform: translate(10px, 20px);
+          transform: translate(15px, 20px);
           width: 90%;
           height: 90%;
           border: 1px solid variable.$color-paperWhite;
@@ -353,7 +380,7 @@
           @media (min-width: variable.$responsive-min-width) {
             transform: translate(1px, 10px);
             width: 90%;
-            height: 67%;
+            height: 70%;
           }
         }
       }
