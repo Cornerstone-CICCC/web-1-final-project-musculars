@@ -1,1 +1,95 @@
 @use "variable";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: variable.$color-paleWhite;
+
+  .footer-wrapper {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .informatino {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: solid 1px variable.$color-black;
+      width: 100%;
+      padding: 20px;
+
+      .company-catchphrase {
+        margin-top: 15px;
+        font-size: 14px;
+        font-weight: 100;
+      }
+
+      .contact {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+
+        .icon {
+          flex: 0 0 24px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .menu-wrapper {
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+
+        ul {
+          flex: 1;
+
+          li {
+            list-style: none;
+            padding: 0.2rem;
+            width: 140px;
+            text-align: center;
+
+            a {
+              color: variable.$color-russett;
+              text-decoration: none;
+              text-underline-offset: 5px;
+              font-weight: 200;
+              font-size: 20px;
+              font-family: variable.$font-title;
+
+              &:hover {
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .copylight {
+      display: flex;
+      justify-content: center;
+      border-top: solid 1px variable.$color-black;
+      width: 100%;
+
+      P {
+        margin: 20px 0;
+        color: variable.$color-russett;
+        font-size: 14px;
+        font-weight: 200;
+      }
+    }
+  }
+}
