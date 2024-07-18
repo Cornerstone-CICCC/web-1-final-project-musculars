@@ -12,7 +12,32 @@ $color-russett: #725a58;
 $color-brown: #a06d67;
 $color-midGray: #888888;
 $color-darkGray: #535353;
+$color-donJuan: #5e4a49;
 $color-black: #191919;
 
 // responsive
 $responsive-min-width: 910px; // just for now
+
+// sets of styles
+.button-basic {
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid $color-donJuan;
+  background-color: transparent;
+  color: $color-donJuan;
+  font-family: $font-title;
+  font-size: 18px;
+}
+
+.button-hover {
+  background-color: $color-darkPink;
+  border: 0.5px solid $color-darkPink;
+  color: $color-paleWhite;
+}
+
+.section-titile {
+  font-size: 40px;
+  color: $color-russett;
+  font-family: $font-title;
+  font-weight: 200;
+}
