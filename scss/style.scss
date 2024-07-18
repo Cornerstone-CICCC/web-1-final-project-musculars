@@ -1,12 +1,5 @@
 @use "variable";
 
-.section-title {
-  font-size: 30px;
-  text-align: center;
-  color: variable.$color-russett;
-  font-family: variable.$font-title;
-}
-
 .makeup-and-hairstyle {
   padding: 40px;
   display: flex;
@@ -27,32 +20,29 @@
     h2 {
       @extend .section-title;
       letter-spacing: 10px;
+      font-size: 40px;
 
       @media (min-width: variable.$responsive-min-width) {
-        font-size: 40px;
+        font-size: 60px;
       }
     }
 
     span {
-      display: inline-block;
-      margin-bottom: 20px;
-      width: 200px;
-      height: 10px;
-      border-bottom: 0.8px solid variable.$color-roseFog;
+      @extend .text-underline;
     }
 
     p {
+      margin: 20px 0;
       text-align: center;
       font-weight: 200;
-      font-size: 13px;
+      font-size: 14px;
     }
 
     .makeup-button {
+      @extend .button-style;
       padding: 10px 20px;
-      border: 0.5px solid variable.$color-donJuan;
-      background-color: transparent;
-      color: variable.$color-donJuan;
-      font-family: variable.$font-title;
+      height: 60px;
+      width: 180px;
 
       &:hover {
         background-color: variable.$color-darkPink;
@@ -188,17 +178,22 @@
     color: variable.$color-russett;
 
     @media (min-width: variable.$responsive-min-width) {
-      padding: 0 50px;
+      padding: 20px 50px;
       margin: 0 60px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 20px 100px;
     }
 
     h2 {
       @extend .section-title;
       padding-top: 30px;
       letter-spacing: 10px;
+      font-size: 40px;
 
       @media (min-width: variable.$responsive-min-width) {
-        font-size: 40px;
+        font-size: 60px;
       }
     }
 
@@ -216,6 +211,7 @@
       .makeup-description {
         display: flex;
         flex-direction: column;
+        padding: 10px;
 
         .makeup-section {
           display: flex;
@@ -226,7 +222,7 @@
           text-decoration: none;
 
           &:hover {
-            background-color: variable.$color-roseFog; // need modification
+            background-color: variable.$color-vanillaIce;
           }
 
           @media (min-width: variable.$responsive-min-width) {
@@ -247,6 +243,7 @@
               display: flex;
               flex-direction: column;
               align-items: center;
+              gap: 10px;
               figure {
                 margin: 0;
               }
@@ -259,28 +256,39 @@
             h3 {
               font-family: variable.$font-title;
               color: variable.$color-russett;
-              font-size: 25px;
+              font-size: 30px;
               margin: 0;
+              @media (min-width: variable.$responsive-min-width) {
+                font-size: 20px;
+              }
+              @media (min-width: 1024px) {
+                font-size: 25px;
+              }
             }
 
             p {
+              margin-top: 14px;
               font-family: variable.$font-body;
               color: variable.$color-black;
               font-weight: 200;
-              font-size: 14px;
+              font-size: 16px;
+
+              @media (min-width: variable.$responsive-min-width) {
+                font-size: 12px;
+              }
             }
           }
 
           .viewClass {
             display: flex;
-            padding: 10px 20px;
             border: none;
             background-color: transparent;
             gap: 10px;
 
             p {
-              font-family: variable.$font-title;
               color: variable.$color-donJuan;
+              font-family: variable.$font-title;
+              font-size: 20px;
 
               @media (min-width: variable.$responsive-min-width) {
                 display: none;
@@ -293,24 +301,24 @@
           display: flex;
           justify-content: start;
           padding: 0 20px;
-          margin: 20px;
+          margin-top: 20px;
+
           @media (min-width: variable.$responsive-min-width) {
             padding: 20px 0px;
             height: 100px;
+            max-width: 300px;
           }
 
           button {
+            @extend .button-style;
             padding: 10px 20px;
             margin-bottom: 10px;
             width: 100%;
-            border: 0.5px solid variable.$color-donJuan;
-            background-color: transparent;
-            color: variable.$color-donJuan;
-            font-family: variable.$font-title;
+            height: 100%;
 
             @media (min-width: variable.$responsive-min-width) {
-              width: 40%;
-              height: 60px;
+              width: 50%;
+              margin-top: 10px;
             }
 
             &:hover {
@@ -326,7 +334,7 @@
         position: relative;
         padding-top: 20px;
         margin: 0;
-        flex: 0 0 350px;
+        flex: 0 0 300px;
 
         img {
           width: 100%;
@@ -335,17 +343,17 @@
         &::after {
           content: "";
           position: absolute;
-          top: 30px;
+          top: 25px;
           left: 15px;
-          transform: translate(10px, 10px);
+          transform: translate(10px, 20px);
           width: 90%;
           height: 90%;
           border: 1px solid variable.$color-paperWhite;
 
           @media (min-width: variable.$responsive-min-width) {
-            transform: translate(0.2rem, 0.3rem);
+            transform: translate(1px, 10px);
             width: 90%;
-            height: 80%;
+            height: 67%;
           }
         }
       }
@@ -360,14 +368,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding: 70px 30px;
+
+    h2 {
+      @extend .section-title;
+      padding: 0;
+      font-size: 35px;
+      @media (min-width: variable.$responsive-min-width) {
+        font-size: 50px;
+      }
+    }
 
     span {
-      display: inline-block;
-      margin-bottom: 20px;
-      width: 200px;
-      height: 10px;
-      border-bottom: 0.8px solid variable.$color-roseFog;
+      @extend .text-underline;
     }
 
     @media (min-width: variable.$responsive-min-width) {
@@ -376,33 +389,21 @@
       }
     }
 
-    h2 {
-      @extend .section-title;
-      padding: 20px;
-      @media (min-width: variable.$responsive-min-width) {
-        font-size: 40px;
-      }
-    }
-
     .beauty-tips {
-      width: 60%;
       display: flex;
       justify-content: center;
+      width: 70%;
       padding: 0 20px;
-      margin-top: 40px;
-      height: 70px;
+      margin-top: 20px;
 
       button {
+        @extend .button-style;
         padding: 10px 20px;
         margin-bottom: 10px;
         width: 100%;
-        border: 0.5px solid variable.$color-donJuan;
-        background-color: transparent;
-        color: variable.$color-donJuan;
-        font-family: variable.$font-title;
 
         @media (min-width: variable.$responsive-min-width) {
-          width: 40%;
+          width: 30%;
           height: 60px;
         }
 
@@ -416,10 +417,10 @@
   }
 }
 
-.scroll_list {
+.scroll-list {
   display: flex;
   gap: 5px;
-  padding: 0;
+  padding-top: 30px;
   width: 90%;
   overflow-x: auto;
   white-space: nowrap;
@@ -434,6 +435,16 @@
   .thumbnail {
     cursor: pointer;
     margin: 10px;
+
+    img {
+      width: 250px;
+
+      &:hover {
+        filter: grayscale(70%);
+        -webkit-filter: grayscale(40%);
+        -moz-filter: grayscale(100%);
+      }
+    }
   }
 }
 
