@@ -7,8 +7,9 @@
   list-style: none;
 }
 
-header {
+body {
   background-color: variable.$color-paleWhite;
+}
 
   .header-wrapper {
     padding: 30px;
@@ -131,8 +132,6 @@ header {
 }
 
 footer {
-  background-color: variable.$color-paleWhite;
-
   .footer-wrapper {
     padding: 30px;
     display: flex;
