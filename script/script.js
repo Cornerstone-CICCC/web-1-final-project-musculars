@@ -1,11 +1,5 @@
 const hamburgerButton = document.querySelector(".hamburger-image");
-const hamburgerWrapper = document.querySelector(".header-wrapper");
 const navigation = document.querySelector(".navigation");
-const menuContent = document.querySelectorAll(".menu-content");
-const test = document.querySelector(".company-logo");
-const test2 = document.querySelectorAll(".menu-list a");
-const test3 = document.querySelectorAll(".menu-list");
-const instagramIcon = document.querySelector(".icon-instagram");
 
 let activated = false;
 
@@ -14,44 +8,40 @@ hamburgerButton.addEventListener("click", () => {
     const hamburgerWrapper = document.querySelector(".header-wrapper");
     const navigation = document.querySelector(".navigation");
     const menuContent = document.querySelectorAll(".menu-content");
-    const test = document.querySelector(".company-logo");
-    const test2 = document.querySelectorAll(".menu-list a");
-    const test3 = document.querySelectorAll(".menu-list");
+    const menuList = document.querySelectorAll(".menu-list a");
+    const menuListWrap = document.querySelectorAll(".menu-list");
     const companyLogo = document.querySelector(".company-logo");
     const instagramIcon = document.querySelector(".icon-instagram");
+    const contactInfo = document.querySelector(".contact-information");
 
+    navigation.classList.remove("active");
     hamburgerWrapper.classList.remove("nav-active");
     navigation.classList.remove("nav-active");
     companyLogo.classList.remove("company-logo-active");
 
     menuContent.forEach((element) => {
       console.log(element);
-      element.classList.remove("nav-active", "test5");
-    });
-    console.log(menuContent);
-
-    test2.forEach((element) => {
-      element.classList.remove("test4");
+      element.classList.remove("nav-active", "menu-active");
     });
 
-    test3.forEach((element) => {
-      element.classList.remove("test5");
+    menuList.forEach((element) => {
+      element.classList.remove("menu-fontsize-active");
+    });
+
+    menuListWrap.forEach((element) => {
+      element.classList.remove("menu-active");
     });
 
     instagramIcon.style.display = "block";
-
-    const contactInfo = document.querySelector(".contact-information");
     contactInfo.remove();
-
     activated = false;
-    navigation.classList.remove("active");
   } else {
     const hamburgerWrapper = document.querySelector(".header-wrapper");
     const navigation = document.querySelector(".navigation");
     const menuContent = document.querySelectorAll(".menu-content");
     const companyLogo = document.querySelector(".company-logo");
-    const test2 = document.querySelectorAll(".menu-list a");
-    const test3 = document.querySelectorAll(".menu-list");
+    const menuList = document.querySelectorAll(".menu-list a");
+    const menuListWrap = document.querySelectorAll(".menu-list");
     const instagramIcon = document.querySelector(".icon-instagram");
 
     navigation.classList.add("active");
@@ -60,18 +50,16 @@ hamburgerButton.addEventListener("click", () => {
     companyLogo.classList.add("company-logo-active");
 
     menuContent.forEach((element) => {
-      element.classList.add("nav-active", "test5");
+      element.classList.add("nav-active", "menu-active");
     });
 
-    test2.forEach((element) => {
-      element.classList.add("test4");
+    menuList.forEach((element) => {
+      element.classList.add("menu-fontsize-active");
     });
 
-    test3.forEach((element) => {
-      element.classList.add("test5");
+    menuListWrap.forEach((element) => {
+      element.classList.add("menu-active");
     });
-
-    instagramIcon.style.display = "none";
 
     if (!activated) {
       navigation.innerHTML += `
@@ -89,6 +77,8 @@ hamburgerButton.addEventListener("click", () => {
             </div>
             <p class="company-catchphrase">Expert makeup and hairstyle studio</p>
         </div>`;
+
+      instagramIcon.style.display = "none";
 
       activated = true;
     }
