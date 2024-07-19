@@ -4,23 +4,27 @@ const navigation = document.querySelector(".navigation");
 let activated = false;
 
 hamburgerButton.addEventListener("click", () => {
+  // show the slide nav
   if (navigation.classList.contains("active")) {
+    const hamburgerButtonImg = document.querySelector(".hamburger-image img");
     const hamburgerWrapper = document.querySelector(".header-wrapper");
     const navigation = document.querySelector(".navigation");
     const menuContent = document.querySelectorAll(".menu-content");
     const menuList = document.querySelectorAll(".menu-list a");
     const menuListWrap = document.querySelectorAll(".menu-list");
     const companyLogo = document.querySelector(".company-logo");
-    const instagramIcon = document.querySelector(".icon-instagram");
     const contactInfo = document.querySelector(".contact-information");
+    const instagramIcon = document.querySelector(".icon-instagram");
 
     navigation.classList.remove("active");
     hamburgerWrapper.classList.remove("nav-active");
     navigation.classList.remove("nav-active");
     companyLogo.classList.remove("company-logo-active");
+    instagramIcon.classList.remove("icon-active");
+    contactInfo.remove();
+    hamburgerButtonImg.src = "./image/hamburger.png";
 
     menuContent.forEach((element) => {
-      console.log(element);
       element.classList.remove("nav-active", "menu-active");
     });
 
@@ -32,10 +36,10 @@ hamburgerButton.addEventListener("click", () => {
       element.classList.remove("menu-active");
     });
 
-    instagramIcon.style.display = "block";
-    contactInfo.remove();
     activated = false;
   } else {
+    // hide the slide nav
+    const hamburgerButtonImg = document.querySelector(".hamburger-image img");
     const hamburgerWrapper = document.querySelector(".header-wrapper");
     const navigation = document.querySelector(".navigation");
     const menuContent = document.querySelectorAll(".menu-content");
@@ -61,6 +65,9 @@ hamburgerButton.addEventListener("click", () => {
       element.classList.add("menu-active");
     });
 
+    instagramIcon.classList.add("icon-active");
+    hamburgerButtonImg.src = "./image/closemark.png";
+
     if (!activated) {
       navigation.innerHTML += `
         <div class="contact-information">
@@ -77,10 +84,8 @@ hamburgerButton.addEventListener("click", () => {
             </div>
             <p class="company-catchphrase">Expert makeup and hairstyle studio</p>
         </div>`;
-
-      instagramIcon.style.display = "none";
-
-      activated = true;
     }
+
+    activated = true;
   }
 });

@@ -8,7 +8,6 @@
       @import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap");
     </style>
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./script/script.js" defer></script>
   </head>
   <body>
     <!-- write a code of home page -->
@@ -20,20 +19,23 @@
             <img src="./image/hamburger.png" alt="hamburger button" />
           </button>
         </div>
-        <nav class="navigation p-header__nav">
+        <div class="mobile-logo">
+          <img src="./image/logo.png" alt="logo" />
+        </div>
+        <nav class="navigation header-navigation">
           <ul class="menu-content menu-left">
-            <li class="menu-list"><a href="">Home</a></li>
-            <li class="menu-list"><a href="">My Work</a></li>
-            <li class="menu-list"><a href="">Services</a></li>
-            <li class="menu-list"><a href="">Classes</a></li>
+            <li class="menu-list"><a href="#home">Home</a></li>
+            <li class="menu-list"><a href="#mywork">My Work</a></li>
+            <li class="menu-list"><a href="#services">Services</a></li>
+            <li class="menu-list"><a href="#classes">Classes</a></li>
           </ul>
           <figure class="company-logo">
             <img src="./image/logo.png" alt="logo" />
           </figure>
           <ul class="menu-content menu-right">
-            <li class="menu-list"><a href="">Beauty Tips</a></li>
-            <li class="menu-list"><a href="">About</a></li>
-            <li class="menu-list"><a href="">Contact</a></li>
+            <li class="menu-list"><a href="beautytips">Beauty Tips</a></li>
+            <li class="menu-list"><a href="about">About</a></li>
+            <li class="menu-list"><a href="contact">Contact</a></li>
             <li class="menu-list list-icon">
               <figure class="icon-instagram">
                 <img src="./image/instagram.png" alt="Instagram" />
@@ -41,6 +43,9 @@
             </li>
           </ul>
         </nav>
+        <figure class="icon-instagram-desktop">
+          <img src="./image/instagram.png" alt="Instagram" />
+        </figure>
       </section>
     </header>
     <!-- Hero Section -->
@@ -90,5 +95,6 @@
         </div>
       </section>
     </footer>
+    <script src="./script/script.js" defer></script>
   </body>
 </html>
