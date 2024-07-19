@@ -2,8 +2,6 @@ const hamburgerButton = document.querySelector(".hamburger-image");
 const hamburgerWrapper = document.querySelector(".header-wrapper");
 const navigation = document.querySelector(".navigation");
 const menuContent = document.querySelectorAll(".menu-content");
-const menuContentLeft = document.querySelector(".menu-left");
-const menuContentRight = document.querySelector(".menu-right");
 const test = document.querySelector(".company-logo");
 const test2 = document.querySelectorAll(".menu-list a");
 const test3 = document.querySelectorAll(".menu-list");
@@ -12,27 +10,23 @@ const instagramIcon = document.querySelector(".icon-instagram");
 let activated = false;
 
 hamburgerButton.addEventListener("click", () => {
-  if (hamburgerWrapper.classList.contains("test2")) {
-    const hamburgerButton = document.querySelector(".hamburger-image");
+  if (navigation.classList.contains("active")) {
     const hamburgerWrapper = document.querySelector(".header-wrapper");
     const navigation = document.querySelector(".navigation");
     const menuContent = document.querySelectorAll(".menu-content");
     const test = document.querySelector(".company-logo");
     const test2 = document.querySelectorAll(".menu-list a");
     const test3 = document.querySelectorAll(".menu-list");
+    const companyLogo = document.querySelector(".company-logo");
     const instagramIcon = document.querySelector(".icon-instagram");
 
-    hamburgerWrapper.classList.remove("test2"); // ok
-
-    hamburgerWrapper.classList.remove("test3"); //ok
-
-    navigation.classList.remove("test3"); // ok
-
-    test.classList.remove("company-logo-active"); //ng
+    hamburgerWrapper.classList.remove("nav-active");
+    navigation.classList.remove("nav-active");
+    companyLogo.classList.remove("company-logo-active");
 
     menuContent.forEach((element) => {
       console.log(element);
-      element.classList.remove("test3", "test5");
+      element.classList.remove("nav-active", "test5");
     });
     console.log(menuContent);
 
@@ -50,24 +44,23 @@ hamburgerButton.addEventListener("click", () => {
     contactInfo.remove();
 
     activated = false;
+    navigation.classList.remove("active");
   } else {
-    const hamburgerButton = document.querySelector(".hamburger-image");
     const hamburgerWrapper = document.querySelector(".header-wrapper");
     const navigation = document.querySelector(".navigation");
     const menuContent = document.querySelectorAll(".menu-content");
-    const test = document.querySelector(".company-logo");
+    const companyLogo = document.querySelector(".company-logo");
     const test2 = document.querySelectorAll(".menu-list a");
     const test3 = document.querySelectorAll(".menu-list");
     const instagramIcon = document.querySelector(".icon-instagram");
 
-    
-    hamburgerWrapper.classList.add("test2");
-    hamburgerWrapper.classList.add("test3");
-    navigation.classList.add("test3");
-    test.classList.add("company-logo-active");
+    navigation.classList.add("active");
+    hamburgerWrapper.classList.add("nav-active");
+    navigation.classList.add("nav-active");
+    companyLogo.classList.add("company-logo-active");
 
     menuContent.forEach((element) => {
-      element.classList.add("test3", "test5");
+      element.classList.add("nav-active", "test5");
     });
 
     test2.forEach((element) => {
