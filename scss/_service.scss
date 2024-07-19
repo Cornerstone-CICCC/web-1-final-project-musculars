@@ -50,9 +50,9 @@
   gap: 10px;
   background-color: variable.$color-linen;
 
-  @media (min-width: 800px) {
+  @media (min-width: variable.$responsive-min-width-800) {
     flex-direction: row;
-    padding-bottom: 50px;
+    padding: 0 50px 3rem 3rem;
 
     &:nth-of-type(2) {
       padding-top: 100px;
@@ -65,8 +65,8 @@
 
   .servie-image {
     flex: 1;
-    height: 100%;
-    @media (min-width: 800px) {
+
+    @media (min-width: variable.$responsive-min-width-800) {
       flex: 0 0 350px;
     }
 
