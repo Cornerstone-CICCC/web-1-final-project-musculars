@@ -4,6 +4,7 @@
 @use "hero.scss";
 @use "about.scss";
 @use "service";
+@use "contact";
 
 body{
   margin: 0;
@@ -546,7 +547,9 @@ body{
 }
 
 header {
+  z-index: 100;
   background-color: variable.$color-paleWhite;
+  list-style: none;
   .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -565,7 +568,7 @@ header {
     }
 
     .header-hamburger {
-      z-index: 100;
+      z-index: 110;
       top: 0;
       left: 20px;
       width: 40px;
@@ -577,6 +580,7 @@ header {
       }
 
       .hamburger-image {
+        z-index: 110;
         top: 80px;
         left: 0;
         width: 25px;
@@ -605,6 +609,7 @@ header {
     }
 
     .navigation {
+      z-index: 100;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -614,6 +619,7 @@ header {
       }
 
       &.header-navigation {
+        z-index: 100;
         content: "";
         position: absolute;
         padding: 40px 0;
@@ -626,7 +632,7 @@ header {
 
         &.active {
           left: 0;
-          padding: 40px 0;
+          padding: 0px 0;
         }
 
         @media (min-width: variable.$responsive-min-width-1024) {
@@ -655,6 +661,7 @@ header {
         }
 
         .menu-list {
+          list-style: none;
           width: 460px;
           padding: 0 5px;
           margin: 20px;
@@ -817,5 +824,5 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }

@@ -50,6 +50,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 }
 .hero-container img {
   width: 100%;
@@ -552,11 +553,6 @@
     margin-right: 20px;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .service-wrapper {
   background-color: #f8f6f4;
 }
@@ -700,6 +696,190 @@
     max-width: 200px;
   }
 }
+body {
+  background-color: #F8F6F4;
+}
+
+input[type=submit] {
+  padding: 10px 40px;
+  background-color: #fae9e7;
+  border: solid 1px black;
+}
+
+section {
+  margin: auto;
+  color: #725a58;
+  font-family: "Baskervville", serif;
+}
+section .contactsection {
+  text-align: center;
+}
+section .contactsection .contacttittle {
+  margin: 10px auto;
+  width: 50%;
+}
+section .contactsection .contacttittle h1 {
+  font-size: 80px;
+}
+section .contactsection .contacttittle .contactunderline {
+  margin: 0 auto;
+  width: 200px;
+  height: 1px;
+  background-color: #E3B6B1;
+}
+section .contactsection .container {
+  width: 60%;
+  background-color: #fae9e7;
+}
+section .contactsection .container .servicetype {
+  font-size: 48px;
+  padding-top: 60px;
+}
+section .contactsection .container .servicetype #services {
+  margin: 0;
+  border-bottom: solid 1px black;
+  padding: 0 80px;
+  text-decoration: none;
+  color: black;
+}
+section .contactsection .container .servicetype #classes {
+  margin: 0;
+  padding: 0 80px;
+  border-bottom: solid 1px #888888;
+  text-decoration: none;
+  color: #888888;
+}
+section .contactsection .container .eventtype {
+  display: none;
+}
+section .contactsection .container .showing.eventtype {
+  display: block;
+  width: 80%;
+  margin: 60px auto;
+  font-weight: 400;
+  font-size: 20px;
+}
+section .contactsection .container .showing.eventtype .eventtypeselect input {
+  display: none;
+}
+section .contactsection .container .showing.eventtype .eventtypeselect label {
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  padding-top: 8px;
+  padding-left: 20px;
+  text-align: left;
+}
+section .contactsection .container .showing.eventtype .eventtypeselect label span {
+  position: absolute;
+}
+section .contactsection .container .showing.eventtype .eventtypeselect label img {
+  position: absolute;
+  margin-top: 5px;
+  left: 80%;
+  display: none;
+}
+section .contactsection .container .showing.eventtype .eventtypeselect .checkedmark + label {
+  border: solid 1px black;
+}
+section .contactsection .container .showing.eventtype .eventtypeselect .checkedmark + label img {
+  display: inline;
+}
+section .contactsection .container .showing.eventtype .calltimearea {
+  display: none;
+}
+section .contactsection .container .showing.eventtype .showing.calltimearea {
+  display: block;
+}
+section .contactsection .container .servicedetails {
+  display: none;
+}
+section .contactsection .container .showing.servicedetails {
+  display: block;
+}
+section .contactsection .container .showing.servicedetails .servicedetailtype input {
+  display: none;
+}
+section .contactsection .container .showing.servicedetails .servicedetailtype label {
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  padding-top: 8px;
+  padding-left: 20px;
+  text-align: left;
+}
+section .contactsection .container .showing.servicedetails .servicedetailtype label span {
+  position: absolute;
+}
+section .contactsection .container .showing.servicedetails .servicedetailtype label img {
+  position: absolute;
+  margin-top: 5px;
+  left: 80%;
+  display: none;
+}
+section .contactsection .container .showing.servicedetails .servicedetailtype .checkedmark + label {
+  border: solid 1px black;
+}
+section .contactsection .container .showing.servicedetails .servicedetailtype .checkedmark + label img {
+  display: inline;
+}
+section .contactsection .container .showing.servicedetails .forwedding {
+  display: none;
+}
+section .contactsection .container .showing.servicedetails .showing.forwedding {
+  display: block;
+}
+section .contactsection .container .showing.servicedetails .showing.forwedding .detailinfo {
+  margin: 10px auto;
+  padding: 10px 20px;
+  text-align: left;
+  background-color: white;
+  width: 60%;
+}
+section .contactsection .container .showing.servicedetails .showing.forwedding .detailinfo .line {
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: #E3B6B1;
+}
+section .contactsection .container .showing.servicedetails .forparty {
+  display: none;
+}
+section .contactsection .container .showing.servicedetails .showing.forparty {
+  display: block;
+}
+section .contactsection .container .showing.servicedetails .showing.forparty .detailinfo {
+  margin: 10px auto;
+  padding: 10px 20px;
+  text-align: left;
+  background-color: white;
+  width: 60%;
+}
+section .contactsection .container .thankyoupage {
+  display: none;
+}
+section .contactsection .container .showing.thankyoupage {
+  display: block;
+}
+section .contactsection .container .showing.thankyoupage .container {
+  width: 80%;
+}
+section .contactsection .container .showing.thankyoupage .container .resultarea {
+  padding: 40px 0;
+  border: solid 1px black;
+}
+section .contactsection .container .showing.thankyoupage .container .resultarea img {
+  width: 85%;
+}
+section .contactsection .container .showing.thankyoupage .container .resultarea .bookedservice {
+  display: none;
+}
+section .contactsection .container .showing.thankyoupage .container .resultarea .showing.bookedservice {
+  display: block;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -1191,7 +1371,9 @@ body {
 }
 
 header {
+  z-index: 100;
   background-color: #f8f6f4;
+  list-style: none;
 }
 header .header-wrapper {
   display: flex;
@@ -1212,7 +1394,7 @@ header .header-wrapper .icon-instagram-desktop {
   }
 }
 header .header-wrapper .header-hamburger {
-  z-index: 100;
+  z-index: 110;
   top: 0;
   left: 20px;
   width: 40px;
@@ -1225,6 +1407,7 @@ header .header-wrapper .header-hamburger {
   }
 }
 header .header-wrapper .header-hamburger .hamburger-image {
+  z-index: 110;
   top: 80px;
   left: 0;
   width: 25px;
@@ -1252,6 +1435,7 @@ header .header-wrapper .mobile-logo {
   }
 }
 header .header-wrapper .navigation {
+  z-index: 100;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1263,6 +1447,7 @@ header .header-wrapper .navigation {
   }
 }
 header .header-wrapper .navigation.header-navigation {
+  z-index: 100;
   content: "";
   position: absolute;
   padding: 40px 0;
@@ -1275,7 +1460,7 @@ header .header-wrapper .navigation.header-navigation {
 }
 header .header-wrapper .navigation.header-navigation.active {
   left: 0;
-  padding: 40px 0;
+  padding: 0px 0;
 }
 @media (min-width: 1024px) {
   header .header-wrapper .navigation.header-navigation {
@@ -1306,6 +1491,7 @@ header .header-wrapper .navigation .menu-content {
   }
 }
 header .header-wrapper .navigation .menu-content .menu-list {
+  list-style: none;
   width: 460px;
   padding: 0 5px;
   margin: 20px;
@@ -1450,7 +1636,7 @@ footer .footer-wrapper .copylight P {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
