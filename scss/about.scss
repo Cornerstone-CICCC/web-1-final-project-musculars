@@ -1,0 +1,507 @@
+@use "variable";
+
+
+.about-container {
+  background-color: variable.$color-paleWhite;
+  padding: 50px 200px;
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.about-img {
+  width: 300px;
+  height: auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+
+.right-section {
+  margin-left: 50px;
+
+  h2 {
+    font-size: 32px;
+    text-align: center;
+    font-family: variable.$font-title;
+  }
+
+  p {
+    font-family: "Avenir", serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25.6px;
+    text-align: center;
+  }
+}
+
+.right-section button {
+  font-size: 18px;
+  padding: 15px 10px;
+  height: auto;
+  width: 50%;
+  color: variable.$color-brown;
+  font-family: variable.$font-title;
+  cursor: pointer;
+  border: 1px solid variable.$color-brown;
+  background: none;
+  margin: 10px 30px;
+  bottom: 0;
+}
+
+.about-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 50%;
+    margin: 10px 30px;
+    bottom: 0;
+  }
+}
+
+.brands-section {
+  background-color: variable.$color-paleWhite;
+}
+
+.our-brands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+
+  p { 
+    color: variable.$color-darkGray;
+    margin: 0 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .brands-border {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #888888;
+    margin: 0 10px;
+  }
+}
+
+.brand-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 15px 100px;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .brand-logos {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-logos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about-container {
+    padding: 0 20px;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  .about-buttons {
+    flex-direction: column-reverse;
+    padding: 0 40px;
+  }
+
+  .right-section {
+    padding-top: 30px;
+    margin-left: 0;
+
+    .right-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .brand-logos {
+    display: grid;
+    grid-row: 2;
+  }
+}
+
+.work-container {
+  background-color: variable.$color-linen;
+
+  .star {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+
+    h2 {
+      color: #5E4A49;
+      font-weight: 400;
+      font-size: 70px;
+      font-family: variable.$font-title;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 0 10px;
+      height: 40px;
+      width: 200px;
+      color: variable.$color-brown;
+      font-family: variable.$font-title;
+      cursor: pointer;
+      border: 1px solid variable.$color-brown;
+      background: none;
+    }
+  }
+}
+
+.work-pics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.testimonial {
+  text-align: center;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    padding: 20px 0;
+  }
+
+  div {
+    padding: 25px 0;
+
+    img {
+      margin: 0px 20px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .work-pics {
+    grid-template-columns: repeat(2, 45%);
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+}
+
+.about-page {
+  background-color: variable.$color-paleWhite;
+  font-family: variable.$font-title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h3 {
+    color: variable.$color-roseFog;
+    font-weight: 400;
+    font-size: 40px;
+    margin: 10px;
+  }
+
+  h2 {
+    color: variable.$color-russett;
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0;
+  }
+}
+
+.about-our-brands {
+  color: variable.$color-russett;
+  text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+
+  p {
+    margin-top: 0;
+    padding-top: 40px;
+  }
+}
+
+.about-express {
+  background-color: variable.$color-linen;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  padding: 100px;
+
+  h3 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 400;
+    color: variable.$color-russett;
+  }
+
+  .about-p-right {
+    padding: 0 30px;
+
+    p {
+      padding: 20px 0;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 25.6px;
+      text-align: left;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 24px 32px;
+      height: auto;
+      color: variable.$color-brown;
+      font-family: variable.$font-title;
+      cursor: pointer;
+      border: 1px solid variable.$color-brown;
+      background: none;
+      bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .about-express {
+    flex-direction: column;
+    padding: 20px 0;
+
+    .about-p-left {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .about-p-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 30px;
+    }
+  }
+}
+
+// My work page
+.mywork-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h3 {
+    font-family: variable.$font-title;
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 0.13em;
+    text-align: center;
+    margin: 0;
+    color: variable.$color-russett;
+  }
+
+  div {
+    width: 30%;
+    height: 1px;
+    background-color: variable.$color-roseFog;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: center;
+    width: 60%;
+  }
+}
+
+.mywork-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .mywork-top {
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+}
+
+.mywork-imgs {
+  height: 100%;
+
+  button {
+    font-size: 18px;
+    padding: 24px 32px;
+    height: auto;
+    color: variable.$color-brown;
+    font-family: variable.$font-title;
+    cursor: pointer;
+    border: 1px solid variable.$color-brown;
+    background: none;
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+}
+
+.mywork-gallary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: variable.$color-linen;
+}
+
+.myworkCheck {
+  display: none;
+}
+
+.work-nav-wrapper {
+  width: 100%; 
+}
+
+.mywork-nav {
+  margin-top: 50px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: variable.$font-title;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 41.6px;
+}
+
+#makeupLabel, #hairLabel { 
+  padding: 0 60px;
+  border-radius: 3px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.underline-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  #underline1, #underline2 {
+    margin-bottom: 20px;
+    height: 1px;
+    width: 250px;
+    background-color: variable.$color-midGray;
+  }
+}
+
+#makeup-container, #hair-container {
+  margin: 0 auto;
+  transition: 0.2s;
+
+  .makeup-photos, .hair-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+#hair-container {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  #makeup-container, #hair-container {
+    margin: 0 auto;
+    transition: 0.2s;
+
+    .makeup-photos, .hair-photos {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 10px;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .mywork-mhidden {
+    display: none;
+  }
+
+  #underline1 {
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  #underline2 {
+    width: 100%;
+    margin-right: 20px;
+  }
+}

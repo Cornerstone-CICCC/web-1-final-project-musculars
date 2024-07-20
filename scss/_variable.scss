@@ -1,3 +1,72 @@
+// font family
+$font-title: "Baskervville", serif;
+$font-body: "Poppins", sans-serif;
+
+// color
+$color-paleWhite: #f8f6f4;
+$color-paperWhite: #fbfafa;
+$color-linen: #fae9e7;
+$color-roseFog: #e3b6b1;
+$color-vanillaIce: #f3dad6;
+$color-darkPink: #b99692;
+$color-russett: #725a58;
+$color-brown: #a06d67;
+$color-midGray: #888888;
+$color-darkGray: #535353;
+$color-donJuan: #5e4a49;
+$color-black: #191919;
+
+
+// responsive
+$responsive-min-width: 910px; // just for now
+$responsive-min-width-800: 800px;
+$responsive-min-width-1024: 1024px;
+
+.section-title {
+  font-size: 30px;
+  text-align: center;
+  color: $color-russett;
+  font-family: $font-title;
+}
+
+.button-style {
+  border: 0.5px solid $color-donJuan;
+  background-color: transparent;
+  color: $color-donJuan;
+  font-family: $font-title;
+}
+
+.text-underline {
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 10px;
+  border-bottom: 0.8px solid $color-roseFog;
+}
+
+.button-basic {
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid $color-donJuan;
+  background-color: transparent;
+  color: $color-donJuan;
+  font-family: $font-title;
+  font-size: 18px;
+}
+
+.button-hover {
+  background-color: $color-darkPink;
+  border: 0.5px solid $color-darkPink;
+  color: $color-paleWhite;
+}
+
+.section-titile {
+  font-size: 40px;
+  color: $color-russett;
+  font-family: $font-title;
+  font-weight: 200;
+}
+
 // background color
 $main-bg-color: #fae9e7;
 
