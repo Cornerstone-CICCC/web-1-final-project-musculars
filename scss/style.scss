@@ -1,1 +1,524 @@
 @use "variable";
+@use "service";
+
+.makeup-and-hairstyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: variable.$color-paleWhite;
+
+  .makeup-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 10px;
+
+    h2 {
+      @extend .section-title;
+      letter-spacing: 10px;
+      font-size: 40px;
+
+      @media (min-width: variable.$responsive-min-width) {
+        font-size: 60px;
+      }
+    }
+
+    span {
+      @extend .text-underline;
+    }
+
+    p {
+      margin: 20px 0;
+      text-align: center;
+      font-weight: 200;
+      font-size: 14px;
+    }
+
+    .makeup-button {
+      @extend .button-style;
+      padding: 10px 20px;
+      width: 180px;
+      height: 60px;
+
+      &:hover {
+        border: 0.5px solid variable.$color-darkPink;
+        background-color: variable.$color-darkPink;
+        color: variable.$color-paleWhite;
+      }
+    }
+  }
+
+  .hairstyle-main {
+    margin-top: 20px;
+
+    p {
+      font-size: 50px;
+    }
+
+    .hairstyle-image-wrap {
+      &.wedding {
+        order: 1;
+        @media (min-width: variable.$responsive-min-width) {
+          order: 2;
+        }
+      }
+
+      &.party {
+        order: 2;
+        @media (min-width: variable.$responsive-min-width) {
+          order: 1;
+        }
+      }
+
+      &.photoshoot {
+        order: 3;
+      }
+
+      .hairstyle-image {
+        margin-top: 30px;
+        position: relative;
+        z-index: 1;
+
+        &.sub-photo-image {
+          flex: 0 0 400px;
+          max-width: 100%;
+
+          p {
+            font-size: 50px;
+          }
+
+          @media (min-width: variable.$responsive-min-width) {
+            flex: 0 0 200px;
+
+            p {
+              &.party {
+                transform: translate(-130%, -60%);
+                font-size: 40px;
+              }
+
+              &.photoshoot {
+                transform: translate(-60%, -60%);
+                font-size: 40px;
+              }
+            }
+
+            &:hover {
+              @media (min-width: variable.$responsive-min-width) {
+                flex: 0 0 250px;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  transform: translate(15px, -15px);
+                  border: 1px solid variable.$color-roseFog;
+                  z-index: -1;
+                }
+
+                p {
+                  transform: translate(-65%, -60%);
+                  font-size: 45px;
+
+                  &.party {
+                    transform: translate(-140%, -60%);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.main-photo-image {
+          flex: 0 0 400px;
+          max-width: 100%;
+
+          p {
+            font-size: 50px;
+          }
+
+          @media (min-width: variable.$responsive-min-width) {
+            flex: 0 0 250px;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              transform: translate(15px, -15px);
+              border: 1px solid variable.$color-roseFog;
+              z-index: -1;
+            }
+
+            p {
+              transform: translate(-90%, -60%);
+              font-size: 45px;
+              &::first-letter {
+                color: variable.$color-darkPink;
+              }
+            }
+          }
+        }
+
+        p {
+          position: absolute;
+          top: 90%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: transparent;
+          color: variable.$color-linen;
+          font-size: 35px;
+          font-family: variable.$font-title;
+
+          @media (min-width: variable.$responsive-min-width) {
+            &.photoshoot {
+              transform: translate(-70%, -50%);
+            }
+
+            &.party {
+              transform: translate(-145%, -50%);
+            }
+
+            &::first-letter {
+              color: variable.$color-darkPink;
+            }
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.makeup-101-wrapper {
+  background-color: variable.$color-paleWhite;
+
+  .makeup-101 {
+    background-color: variable.$color-linen;
+    color: variable.$color-russett;
+
+    @media (min-width: variable.$responsive-min-width) {
+      margin: 0 60px;
+      padding: 20px 50px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 20px 100px;
+    }
+
+    h2 {
+      @extend .section-title;
+      padding: 30px 20px 0;
+      letter-spacing: 10px;
+      font-size: 40px;
+
+      @media (min-width: variable.$responsive-min-width) {
+        font-size: 60px;
+      }
+    }
+
+    .makeup-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px;
+
+      @media (min-width: variable.$responsive-min-width) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .makeup-description {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+
+        .makeup-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 40px;
+          text-align: center;
+          text-decoration: none;
+
+          &:hover {
+            background-color: variable.$color-vanillaIce;
+          }
+
+          @media (min-width: variable.$responsive-min-width) {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            padding: 10px;
+            margin-top: 30px;
+            height: 100px;
+            text-align: start;
+          }
+
+          .makeup-content {
+            width: 100%;
+            height: 100%;
+
+            .lesson-name {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
+              figure {
+                margin: 0;
+              }
+
+              @media (min-width: variable.$responsive-min-width) {
+                flex-direction: row;
+              }
+            }
+
+            h3 {
+              margin: 0;
+              font-family: variable.$font-title;
+              color: variable.$color-russett;
+              font-size: 30px;
+
+              @media (min-width: variable.$responsive-min-width) {
+                font-size: 20px;
+              }
+              @media (min-width: 1024px) {
+                font-size: 25px;
+              }
+            }
+
+            p {
+              margin-top: 14px;
+              font-family: variable.$font-body;
+              color: variable.$color-black;
+              font-weight: 200;
+              font-size: 16px;
+
+              @media (min-width: variable.$responsive-min-width) {
+                font-size: 12px;
+              }
+            }
+          }
+
+          .viewClass {
+            display: flex;
+            border: none;
+            background-color: transparent;
+            gap: 10px;
+
+            p {
+              color: variable.$color-donJuan;
+              font-family: variable.$font-title;
+              font-size: 20px;
+
+              @media (min-width: variable.$responsive-min-width) {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .all-classes {
+          display: flex;
+          justify-content: start;
+          padding: 0 20px;
+          margin-top: 20px;
+
+          @media (min-width: variable.$responsive-min-width) {
+            padding: 20px 0px;
+            height: 100px;
+            max-width: 300px;
+          }
+
+          button {
+            @extend .button-style;
+            padding: 10px 20px;
+            margin-bottom: 30px;
+            width: 100%;
+            height: 100%;
+
+            @media (min-width: variable.$responsive-min-width) {
+              width: 50%;
+              margin-top: 10px;
+            }
+
+            &:hover {
+              background-color: variable.$color-darkPink;
+              border: 0.5px solid variable.$color-darkPink;
+              color: variable.$color-paleWhite;
+            }
+          }
+        }
+      }
+
+      .instructor-image {
+        position: relative;
+        padding-top: 20px;
+        margin: 0;
+        flex: 0 0 300px;
+
+        img {
+          width: 100%;
+          display: block;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: calc(100% - 48px);
+          height: calc(100% - 48px);
+          border: 1px solid variable.$color-paperWhite;
+          display: block;
+
+          @media (min-width: variable.$responsive-min-width) {
+            top: 30px;
+            left: 10px;
+            transform: translate(10px, 10px);
+            height: 70%;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.diy-wrapper {
+  background-color: variable.$color-paleWhite;
+
+  .diy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 30px;
+
+    h2 {
+      @extend .section-title;
+      padding: 0;
+      font-size: 35px;
+      @media (min-width: variable.$responsive-min-width) {
+        font-size: 50px;
+      }
+    }
+
+    span {
+      @extend .text-underline;
+    }
+
+    @media (min-width: variable.$responsive-min-width) {
+      span {
+        display: none;
+      }
+    }
+
+    .beauty-tips {
+      display: flex;
+      justify-content: center;
+      width: 70%;
+      padding: 0 20px;
+      margin-top: 20px;
+
+      button {
+        @extend .button-style;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        width: 100%;
+
+        @media (min-width: variable.$responsive-min-width) {
+          width: 30%;
+          height: 60px;
+        }
+
+        &:hover {
+          background-color: variable.$color-darkPink;
+          border: 0.5px solid variable.$color-darkPink;
+          color: variable.$color-paleWhite;
+        }
+      }
+    }
+  }
+}
+
+.scroll-list {
+  display: flex;
+  gap: 5px;
+  padding-top: 30px;
+  width: 90%;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  list-style: none;
+
+  @media (min-width: variable.$responsive-min-width) {
+    justify-content: center;
+    overflow-x: unset;
+  }
+
+  .thumbnail {
+    cursor: pointer;
+    margin: 10px;
+
+    img {
+      width: 250px;
+
+      &:hover {
+        filter: grayscale(70%);
+        -webkit-filter: grayscale(40%);
+        -moz-filter: grayscale(100%);
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: variable.$color-black;
+
+  .modal-content {
+    position: relative;
+    margin: 15% auto;
+    width: 80%;
+
+    .close {
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      display: block;
+      border: none;
+      width: 50px;
+      z-index: 999;
+      font-size: 2rem;
+      font-weight: normal;
+      color: variable.$color-paleWhite;
+
+      &:hover,
+      :focus {
+        color: variable.$color-paleWhite;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
