@@ -86,7 +86,7 @@
     }
 
     h3 {
-      @extend .section-titile;
+      @extend .section-title;
     }
 
     .price-time {
@@ -164,7 +164,7 @@
         @extend .button-basic;
 
         &:hover {
-          @extend.button-hover;
+          @extend .button-hover;
         }
       }
     }
