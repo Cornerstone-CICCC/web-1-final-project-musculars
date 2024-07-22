@@ -1,5 +1,5 @@
 //componentization of the header and footer
-fetch("header.html")
+fetch("../header.html")
   .then((response) => response.text())
   .then((data) => {
     document.querySelector("#header").innerHTML = data
@@ -297,7 +297,7 @@ if (openChat) {
 }
 
 // My Work ページの切り替え処理
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
   // checkbox
   const checkbox1 = document.getElementById("makeups");
   const checkbox2 = document.getElementById("hairstyle");
@@ -345,5 +345,5 @@ window.addEventListener('load', () => {
     hoge2Content.style.display = "block";
     hoge1Content.style.display = "none";
   });
-});
+// });
 
