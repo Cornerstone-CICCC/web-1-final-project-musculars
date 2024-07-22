@@ -297,7 +297,6 @@ if (openChat) {
 }
 
 // My Work ページの切り替え処理
-// window.addEventListener('load', () => {
   // checkbox
   const checkbox1 = document.getElementById("makeups");
   const checkbox2 = document.getElementById("hairstyle");
@@ -322,7 +321,7 @@ if (openChat) {
   underline1.style.backgroundColor = "black";
   underline2.style.backgroundColor = "#888888";
 
-  // hoge1タブのクリック時
+  // 1タブのクリック時
   label1.addEventListener("click", function () {
     checkbox1.checked = true;
     checkbox2.checked = false;
@@ -334,7 +333,7 @@ if (openChat) {
     underline2.style.backgroundColor = "#888888";
   });
 
-  // hoge2タブのクリック時
+  // 2タブのクリック時
   label2.addEventListener("click", function () {
     checkbox2.checked = true;
     checkbox1.checked = false;
@@ -345,5 +344,5 @@ if (openChat) {
     hoge2Content.style.display = "block";
     hoge1Content.style.display = "none";
   });
-// });
+
 
