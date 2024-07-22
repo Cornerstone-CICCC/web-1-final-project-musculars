@@ -53,6 +53,12 @@ $responsive-min-width-1024: 1024px;
   font-size: 18px;
 }
 
+.button-contact-link{
+    color: $color-donJuan;
+    text-decoration: none;
+    $color-paleWhite: #f8f6f4;
+}
+
 .button-hover {
   background-color: $color-darkPink;
   border: 0.5px solid $color-darkPink;
