@@ -1,7 +1,46 @@
 //componentization of the header and footer
 fetch("header.html")
   .then((response) => response.text())
-  .then((data) => (document.querySelector("#header").innerHTML = data));
+  .then((data) => {
+    document.querySelector("#header").innerHTML = data
+    const hamburgerButton = document.querySelector(".hamburger-image");
+    const navigation = document.querySelector(".navigation");
+
+    // header section
+    hamburgerButton.addEventListener("click", () => {
+    // show the slide navigation
+    if (navigation.classList.contains("active")) {
+      const contactInfo = document.querySelector(".contact-information");
+      const hamburgerButtonImg = document.querySelector(".hamburger-image img");
+  
+      navigation.classList.remove("active");
+      contactInfo.remove();
+      hamburgerButtonImg.src = "./image/hamburger.png";
+    } else {
+      // hide the slide navigation
+      const hamburgerButtonImg = document.querySelector(".hamburger-image img");
+      navigation.classList.add("active");
+      hamburgerButtonImg.src = "./image/closemark.png";
+  
+      navigation.innerHTML += `
+          <div class="contact-information">
+              <div class="contact">
+                  <figure class="icon">
+                  <img src="./image/phone.png" alt="phone" />
+                  </figure>
+                  <figure class="icon">
+                  <img src="./image/whatsapp.png" alt="whatsApp" />
+                  </figure>
+                  <figure class="icon">
+                  <img src="./image/instagram.png" alt="Instagram" />
+                  </figure>
+              </div>
+              <p class="company-catchphrase">Expert makeup and hairstyle studio</p>
+          </div>`;
+    }
+  });
+  
+});
 
 fetch("footer.html")
   .then((response) => response.text())
@@ -32,8 +71,7 @@ const submitbtn = document.querySelector("#submit-btn");
 const thankyoupage = document.querySelector(".thankyoupage"); // final page
 
 
-const hamburgerButton = document.querySelector(".hamburger-image");
-const navigation = document.querySelector(".navigation");
+
 //"Anyone else need service?" areas in second page
 const forwedding = document.querySelector(".forwedding");
 const forparty = document.querySelector(".forparty");
@@ -309,36 +347,3 @@ window.addEventListener('load', () => {
   });
 });
 
-// header section
-hamburgerButton.addEventListener("click", () => {
-  // show the slide navigation
-  if (navigation.classList.contains("active")) {
-    const contactInfo = document.querySelector(".contact-information");
-    const hamburgerButtonImg = document.querySelector(".hamburger-image img");
-
-    navigation.classList.remove("active");
-    contactInfo.remove();
-    hamburgerButtonImg.src = "./image/hamburger.png";
-  } else {
-    // hide the slide navigation
-    const hamburgerButtonImg = document.querySelector(".hamburger-image img");
-    navigation.classList.add("active");
-    hamburgerButtonImg.src = "./image/closemark.png";
-
-    navigation.innerHTML += `
-        <div class="contact-information">
-            <div class="contact">
-                <figure class="icon">
-                <img src="./image/phone.png" alt="phone" />
-                </figure>
-                <figure class="icon">
-                <img src="./image/whatsapp.png" alt="whatsApp" />
-                </figure>
-                <figure class="icon">
-                <img src="./image/instagram.png" alt="Instagram" />
-                </figure>
-            </div>
-            <p class="company-catchphrase">Expert makeup and hairstyle studio</p>
-        </div>`;
-  }
-});
