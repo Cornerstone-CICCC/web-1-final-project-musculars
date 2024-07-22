@@ -400,7 +400,13 @@ body{
 
         img {
           width: 100%;
+          max-width: 400px;
+          margin: auto;
           display: block;
+
+           @media (min-width: variable.$responsive-min-width-992) {
+            width: 100%;
+          }
         }
 
         &::after {
@@ -409,17 +415,17 @@ body{
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: calc(100% - 48px);
-          height: calc(100% - 48px);
+          width: calc(100% - 200px);
+          height: calc(100% - 100px);
           border: 1px solid variable.$color-paperWhite;
           display: block;
 
           @media (min-width: variable.$responsive-min-width-992) {
-            top: 30px;
-            left: 10px;
-            transform: translate(10px, 10px);
-            height: 70%;
-            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            width: calc(100% - 48px);
+            height: calc(100% - 160px);
           }
         }
       }
