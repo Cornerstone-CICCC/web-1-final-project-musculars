@@ -64,6 +64,11 @@ body{
 
     .makeup-button {
       @extend .button-style;
+
+      a{
+          @extend .button-contact-link;
+      }
+
       padding: 10px 20px;
       width: 180px;
       height: 60px;
