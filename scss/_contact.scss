@@ -14,6 +14,10 @@ section{
     color: variable.$main-text-color;
     font-family: variable.$main-font;
 
+    form{
+        padding-bottom: 60px;
+    }
+
     .contactsection{
         text-align: center;
 
@@ -186,6 +190,7 @@ section{
 
                 .container{
                     width: 80%;
+                    padding-bottom: 60px;
                     .resultarea{
                         padding: 40px 0;
                         border: solid 1px black;
@@ -199,6 +204,13 @@ section{
                         }
                         .showing.bookedservice{
                             display: block;
+                        }
+
+                        .linksection{
+                            #logoimg{
+                                width: 100px;
+                                margin: 10px;
+                            }
                         }
                     }    
                 }
